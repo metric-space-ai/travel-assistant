@@ -4,3 +4,57 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+axum = { version = "0.7.7", default-features = false, features = [
+    "http1",
+    "json",
+    "matched-path",
+    "multipart",
+    "query",
+    "tokio",
+    "tower-log",
+    "tracing",
+    "ws"
+] }
+axum-extra = { version = "0.9.4", default-features = false, features = [
+    "tracing",
+    "typed-header"
+] }
+axum-macros = "0.4.2"
+clap = { version = "4.5.20", default-features = false, features = [
+    "derive",
+    "env",
+    "help",
+    "std"
+] }
+serde = { version = "1.0.214", default-features = false, features = [
+    "derive"
+] }
+serde_json = "1.0.132"
+strum_macros = "0.26.4"
+tokio = { version = "1.41.1", default-features = false, features = [
+    "rt-multi-thread",
+    "time"
+] }
+tower = { version = "0.5.1", default-features = false, features = [
+    "timeout",
+    "util"
+] }
+tower-http = { version = "0.6.1", default-features = false, features = [
+    "add-extension",
+    "cors",
+    "trace",
+] }
+tracing = { version = "0.1.40", default-features = false, features = [
+    "std"
+] }
+tracing-subscriber = { version = "0.3.18", default-features = false, features = [
+    "ansi",
+    "env-filter",
+    "fmt"
+] }
+
+[profile.release]
+lto = true
+opt-level = "z"
+panic = "abort"
+strip = true
