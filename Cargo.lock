@@ -1039,6 +1039,7 @@ dependencies = [
  "axum-extra",
  "axum-macros",
  "clap",
+ "http-body-util",
  "serde",
  "serde_json",
  "strum_macros",
