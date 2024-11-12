@@ -4,6 +4,16 @@ use std::sync::Arc;
 use ureq::Agent;
 use url::Url;
 
+pub struct EventPost {
+    pub description: Option<String>,
+    pub end: Option<String>,
+    pub location: Option<String>,
+    pub priority: Option<String>,
+    pub start: String,
+    pub status: Option<String>,
+    pub summary: String,
+}
+
 pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
     let agent = Agent::new();
     let url = Url::parse(&context.config.caldav_url)?;
@@ -16,14 +26,13 @@ pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
     for calendar in calendars {
         tracing::info!("calendar {:?}", calendar);
         let new_event = Event::builder(calendar.url().clone())
-            .summary("Sample event summary".to_string())
-            .description(Some("Sample event description".to_string()))
-            .end("20241112T210000Z".to_string(), vec![])
-            .etag(Some("686897696a7c876b7e".to_string()))
-            .location(Some("Sample event location".to_string()))
-            .priority("1".to_string())
+            //.description(Some("Sample event description".to_string()))
+            //.end("20241112T210000Z".to_string(), vec![])
+            //.location(Some("Sample event location".to_string()))
+            //.priority("1".to_string())
             .start("20241112T190000Z".to_string(), vec![])
-            .status("CONFIRMED".to_string())
+            //.status("CONFIRMED".to_string())
+            .summary("Sample event summary".to_string())
             .build();
         tracing::info!("new_event = {:?}", new_event);
         let new_event = minicaldav::save_event(agent.clone(), &credentials, new_event)?;
