@@ -6,6 +6,7 @@ use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 mod api;
 mod app;
 mod app_error;
+mod calendar_agent;
 mod config;
 mod context;
 
@@ -24,7 +25,7 @@ pub async fn run() -> Result<()> {
     tracing_subscriber::registry()
         .with(
             tracing_subscriber::EnvFilter::try_from_default_env().unwrap_or_else(|_| {
-                "luau_server=error,runtime=error,tokio=error,tower_http=error".into()
+                "travel_assistant=error,runtime=error,tokio=error,tower_http=error".into()
             }),
         )
         .with(tracing_subscriber::fmt::layer())

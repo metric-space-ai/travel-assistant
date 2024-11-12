@@ -1,4 +1,4 @@
-use crate::{app_error::AppError, context::Context};
+use crate::{app_error::AppError, calendar_agent, context::Context};
 use axum::{
     body::Body,
     extract::{Request, State},
@@ -11,7 +11,7 @@ use std::sync::Arc;
 
 #[axum_macros::debug_handler]
 pub async fn action(
-    State(_context): State<Arc<Context>>,
+    State(context): State<Arc<Context>>,
     request: Request<Body>,
 ) -> Result<impl IntoResponse, AppError> {
     let body = BodyExt::collect(request.into_body())
@@ -21,6 +21,8 @@ pub async fn action(
 
     let payload = String::from_utf8(body)?;
 
-    tracing::info!("{:?}", payload);
+    let response = calendar_agent::agent(context, payload).await?;
+
+    tracing::info!("{:?}", response);
     Ok((StatusCode::OK, Json("{}")).into_response())
 }
