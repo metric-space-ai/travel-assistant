@@ -50,19 +50,35 @@ pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
 }
 
 pub async fn save_event(agent: Agent, credentials: &Credentials, event_post: EventPost, url: Url) -> Result<Event> {
-    let new_event = Event::builder(url)
-    //.description(Some("Sample event description".to_string()))
-    //.end("20241112T210000Z".to_string(), vec![])
-    //.location(Some("Sample event location".to_string()))
-    //.priority("1".to_string())
-    .start("20241112T190000Z".to_string(), vec![])
-    //.status("CONFIRMED".to_string())
-    .summary("Sample event summary".to_string())
-    .build();
+    let event_builder = Event::builder(url)
+        .description(event_post.description)
+        .location(event_post.location)
+        .start(event_post.start, vec![])
+        .summary(event_post.summary);
 
-    tracing::info!("new_event = {:?}", new_event);
+    let event_builder = if let Some(end) = event_post.end {
+        event_builder.end(end, vec![])
+    } else {
+        event_builder
+    };
 
-    let new_event = minicaldav::save_event(agent.clone(), credentials, new_event)?;
+    let event_builder = if let Some(priority) = event_post.priority {
+        event_builder.priority(priority)
+    } else {
+        event_builder
+    };
+
+    let event_builder = if let Some(status) = event_post.status {
+        event_builder.status(status)
+    } else {
+        event_builder
+    };
+
+    let event = event_builder.build();
+
+    tracing::info!("event = {:?}", event);
+
+    let new_event = minicaldav::save_event(agent.clone(), credentials, event)?;
 
     Ok(new_event)
 }
