@@ -35,7 +35,13 @@ pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
             summary: "Sample event summary".to_string(),
         };
 
-        let new_event = save_event(agent.clone(), &credentials, event_post, calendar.url().clone()).await?;
+        let new_event = save_event(
+            agent.clone(),
+            &credentials,
+            event_post,
+            calendar.url().clone(),
+        )
+        .await?;
         tracing::info!("new_event = {:?}", new_event);
         let (events, errors) = minicaldav::get_events(agent.clone(), &credentials, &calendar)?;
         for event in events {
@@ -49,7 +55,12 @@ pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
     Ok(payload)
 }
 
-pub async fn save_event(agent: Agent, credentials: &Credentials, event_post: EventPost, url: Url) -> Result<Event> {
+pub async fn save_event(
+    agent: Agent,
+    credentials: &Credentials,
+    event_post: EventPost,
+    url: Url,
+) -> Result<Event> {
     let event_builder = Event::builder(url)
         .description(event_post.description)
         .location(event_post.location)
