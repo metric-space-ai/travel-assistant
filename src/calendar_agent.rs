@@ -27,10 +27,10 @@ pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
         tracing::info!("calendar {:?}", calendar);
         let event_post = EventPost {
             description: Some("Sample event description".to_string()),
-            end: Some("20241112T210000Z".to_string()),
+            end: Some("20241112T110000Z".to_string()),
             location: Some("Sample event location".to_string()),
             priority: Some("1".to_string()),
-            start: "20241112T190000Z".to_string(),
+            start: "20241112T100000Z".to_string(),
             status: Some("CONFIRMED".to_string()),
             summary: "Sample event summary".to_string(),
         };
