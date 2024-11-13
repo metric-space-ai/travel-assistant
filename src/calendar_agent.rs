@@ -26,11 +26,11 @@ pub async fn agent(context: Arc<Context>, payload: String) -> Result<String> {
     for calendar in calendars {
         tracing::info!("calendar {:?}", calendar);
         let event_post = EventPost {
-            description: Some("Sample event description 2".to_string()),
-            end: Some("20241112T120000Z".to_string()),
-            location: Some("Sample event location 2".to_string()),
+            description: Some("Sample event description".to_string()),
+            end: Some("20241113T160000Z".to_string()),
+            location: Some("Sample event location".to_string()),
             priority: Some("1".to_string()),
-            start: "20241112T110000Z".to_string(),
+            start: "20241113T150000Z".to_string(),
             status: Some("CONFIRMED".to_string()),
             summary: "Sample event summary 2".to_string(),
         };
@@ -89,7 +89,7 @@ pub async fn save_event(
 
     tracing::info!("event = {:?}", event);
 
-    let new_event = minicaldav::save_event(agent.clone(), credentials, event)?;
+    let new_event = minicaldav::save_event(agent, credentials, event)?;
 
     Ok(new_event)
 }
