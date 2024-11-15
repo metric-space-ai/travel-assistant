@@ -1,0 +1,187 @@
+{
+    "travel_plan_prompts": {
+      "Museum visits": [
+        "I want to see a historical museum with ancient artifacts and relics.",
+        "I'm interested in exploring a museum showcasing modern art from emerging artists.",
+        "Looking for a science museum with interactive exhibits and fun for all ages.",
+        "Is there a natural history museum with dinosaur skeletons and fossils?",
+        "I'd love to visit an art museum focused on classic European paintings."
+      ],
+      "Restaurant dining": [
+        "I'm looking for a restaurant with a cozy atmosphere and local cuisine.",
+        "Where can I find a fine dining experience with a great view?",
+        "I want to try a trendy spot for international fusion food.",
+        "Looking for a casual place with delicious vegan and vegetarian options.",
+        "I’d love a seafood restaurant with fresh catches and ocean views."
+      ],
+      "Park visits": [
+        "Is there a large park with scenic trails and picnic areas?",
+        "I'd like to visit a botanical park with beautiful flower gardens.",
+        "Looking for a quiet park with a lake for a relaxing afternoon.",
+        "Are there any parks with children’s playgrounds and activities?",
+        "Where can I find a park with cycling trails and fitness stations?"
+      ],
+      "City tours": [
+        "Looking for a guided tour of the city's main historical sites.",
+        "I want to join a city tour focused on local food and culture.",
+        "Are there any night city tours with beautiful skyline views?",
+        "I'd like a city tour that covers art and architecture landmarks.",
+        "I'm interested in a walking tour of the city's hidden gems."
+      ],
+      "Historical site visits": [
+        "Where can I visit ancient ruins with a rich history?",
+        "Looking for a historical site with impressive architecture.",
+        "Are there any famous battlefields or forts to explore nearby?",
+        "I want to see a historical palace with royal artifacts.",
+        "I’d like to visit a UNESCO World Heritage Site in the area."
+      ],
+      "Shopping excursions": [
+        "Looking for a place to shop for unique local souvenirs.",
+        "Is there a luxury shopping district with designer brands?",
+        "Where can I find a market with handcrafted artisan goods?",
+        "I'd like to go on a shopping tour of vintage and thrift stores.",
+        "Are there any malls with popular international fashion brands?"
+      ],
+      "Beach outings": [
+        "I'm looking for a beach with white sand and calm waters.",
+        "Where can I go for beach sports and activities like surfing?",
+        "Is there a secluded beach for a quiet day of relaxation?",
+        "Looking for a beach with nearby cafes and restaurants.",
+        "Are there beaches with stunning sunset views around?"
+      ],
+      "Hiking trips": [
+        "Where can I find scenic mountain trails for a day hike?",
+        "Looking for a forest trail with waterfalls along the way.",
+        "I’d like to hike a trail with panoramic city views.",
+        "Are there any easy hiking trails suitable for beginners?",
+        "I'm interested in a rugged trail for an adventurous hike."
+      ],
+      "Amusement parks": [
+        "Looking for an amusement park with thrilling roller coasters.",
+        "Are there any family-friendly theme parks nearby?",
+        "I want to visit a water park with big slides and pools.",
+        "Where can I find an amusement park with VR attractions?",
+        "I’d like an amusement park with live entertainment shows."
+      ],
+      "Food tastings": [
+        "I'm interested in a local food tour with tasting stops.",
+        "Where can I go for a wine and cheese tasting experience?",
+        "Looking for a place to sample traditional dishes and snacks.",
+        "Are there any chocolate or dessert tastings nearby?",
+        "I’d like a street food tasting tour around the city."
+      ],
+      "Nightlife experiences": [
+        "Where are the best clubs for a lively nightlife scene?",
+        "Looking for a rooftop bar with amazing city views.",
+        "I want to experience a local jazz or live music venue.",
+        "Are there any popular lounges with a relaxed vibe?",
+        "I'd like to go on a pub crawl to explore local bars."
+      ],
+      "Boat tours": [
+        "Is there a sunset cruise with beautiful coastal views?",
+        "I want a guided boat tour to see local marine wildlife.",
+        "Are there any glass-bottom boat tours for underwater views?",
+        "Looking for a river or lake cruise with scenic landscapes.",
+        "I’d like a boat tour that stops at nearby islands."
+      ],
+      "Art galleries": [
+        "Looking for an art gallery with contemporary works by local artists.",
+        "Are there any galleries showcasing classical European art?",
+        "I’d like to see an exhibit focused on abstract and modern art.",
+        "Where can I find a photography gallery with unique collections?",
+        "I'm interested in a gallery with sculptures and installations."
+      ],
+      "Street markets": [
+        "Where can I find a vibrant street market with local vendors?",
+        "Looking for a flea market with vintage and antique items.",
+        "I want to explore a food market with fresh produce and treats.",
+        "Are there any craft markets with handmade goods and art?",
+        "I'd like a night market with a lively, festive atmosphere."
+      ],
+      "Wildlife watching": [
+        "Where can I go to watch dolphins or whales?",
+        "Looking for a nature reserve with birdwatching opportunities.",
+        "I want to visit a wildlife park with big cats and exotic animals.",
+        "Are there safaris available to see animals in their habitats?",
+        "I'd like to go on a guided wildlife tour with an expert."
+      ],
+      "Spa sessions": [
+        "Looking for a luxury spa with massages and relaxation treatments.",
+        "Is there a natural hot springs spa around here?",
+        "I'd like a wellness center with yoga and meditation sessions.",
+        "Where can I find a day spa with facials and skincare treatments?",
+        "I'm interested in a spa that uses organic and natural products."
+      ],
+      "Photography tours": [
+        "Where can I join a guided photo tour of scenic locations?",
+        "Looking for a night photography tour of city lights.",
+        "I’d like a wildlife photography tour in nature parks.",
+        "Are there photography tours focused on local architecture?",
+        "I'd love a photo tour that covers historic sites and landmarks."
+      ],
+      "Wine tasting": [
+        "Where can I go for a vineyard tour and wine tasting?",
+        "Looking for a wine bar with a tasting flight option.",
+        "Are there any wineries that offer private tastings?",
+        "I'd like a guided tasting with cheese and wine pairings.",
+        "Where can I taste locally-produced wines with unique flavors?"
+      ],
+      "Botanical gardens": [
+        "Looking for a botanical garden with exotic plant species.",
+        "Are there gardens with beautiful seasonal flower displays?",
+        "I’d like to see a Japanese-style garden with peaceful ponds.",
+        "Where can I find a greenhouse with tropical plants?",
+        "I'm interested in botanical gardens with educational tours."
+      ],
+      "Cooking classes": [
+        "Where can I take a cooking class to learn local recipes?",
+        "Looking for a pastry or dessert-making workshop.",
+        "I’d like a hands-on cooking experience with a professional chef.",
+        "Are there any wine-paired cooking classes available?",
+        "I'm interested in a family-friendly cooking class."
+      ],
+      "Adventure sports": [
+        "Where can I go for a bungee jumping experience?",
+        "Looking for a place to try zip-lining over scenic landscapes.",
+        "Are there any paragliding spots for beginners?",
+        "I’d like to try rock climbing at an outdoor location.",
+        "Where can I find a place to go skydiving nearby?"
+      ],
+      "Scenic viewpoints": [
+        "Where can I find the best panoramic views of the city?",
+        "Looking for a viewpoint to watch the sunrise or sunset.",
+        "Are there scenic lookout points along coastal cliffs?",
+        "I'd like a mountain viewpoint with a breathtaking view.",
+        "Where can I see the city skyline from a high point?"
+      ],
+      "Local workshops": [
+        "Are there any pottery workshops where I can make my own piece?",
+        "Looking for a woodworking class with hands-on learning.",
+        "I’d like to attend a photography workshop for beginners.",
+        "Where can I find a painting workshop led by a local artist?",
+        "I'm interested in a jewelry-making workshop."
+      ],
+      "Temple visits": [
+        "Where can I visit an ancient temple with beautiful architecture?",
+        "Looking for a quiet temple with meditation sessions available.",
+        "I’d like to visit a Buddhist temple with guided tours.",
+        "Are there any temples known for stunning murals and art?",
+        "I'd love to see a temple with a historical significance."
+      ],
+      "Craft markets": [
+        "Where can I find a craft market with handmade jewelry?",
+        "Looking for a market with a variety of handcrafted decor items.",
+        "Are there craft markets featuring local artists and artisans?",
+        "I’d like to buy unique pottery and ceramics from a craft fair.",
+        "Where can I find a market specializing in textiles and fabrics?"
+      ],
+      "Farm tours": [
+        "Where can I go for a guided tour of a working farm?",
+        "Looking for a farm with fresh produce and local food tasting.",
+        "I’d like a farm tour with activities like feeding animals.",
+        "Are there farms that offer hands-on agricultural experiences?",
+        "I'm interested in a farm tour with a focus on sustainable farming."
+      ]
+    }
+  }
+  
